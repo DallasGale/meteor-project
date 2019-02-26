@@ -19,8 +19,8 @@ class App extends Component {
 
     // Ref Task collection @ '../imports/api/tasks.js'
     Tasks.insert({
-      text: text,
-      createdAt: new Date()
+      text,
+      createdAt: new Date(),
     });
 
     // Clear Form
@@ -57,6 +57,11 @@ class App extends Component {
 // HOC
 export default withTracker(() => {
 	return {
-		tasks: Tasks.find({}).fetch()
+    tasks: Tasks.find({}, 
+      {
+        sort: {
+          createdAt: -1
+        }
+      }).fetch()
 	};
 })(App);
