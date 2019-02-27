@@ -42,13 +42,14 @@ class App extends Component {
 				</header>
 
         {/* Form to add new tasks */}
-				<form className="new-task" onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" ref="textInput" placeholder="Type to add new tasks" />
-        </form>
+        <div className="content">
+          <form className="new-task" onSubmit={this.handleSubmit.bind(this)}>
+            <input type="text" ref="textInput" placeholder="Type to add new tasks"  className="form__field" />
+          </form>
 
-        {/*  Todo tasks listed here */}
-				<ul>{this.renderTasks()}</ul>
-
+          {/*  Todo tasks listed here */}
+          <ul>{this.renderTasks()}</ul>
+        </div>
 			</div>
 		);
 	}

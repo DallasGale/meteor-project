@@ -22,6 +22,10 @@ body {
   min-height: 100%;
   background: white;
 }
+
+.content {
+  padding: 1em;
+}
  
 header {
   background: #d2edf4;
@@ -43,18 +47,16 @@ h1 {
 }
  
 form {
-  margin-top: 10px;
-  margin-bottom: -10px;
   position: relative;
 }
- 
+
 .new-task input {
   box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
+  /* padding: 10px 0; */
+  background: rgb(236, 236, 236);
   border: none;
   width: 100%;
-  padding-right: 80px;
+  padding: 1em;
   font-size: 1em;
 }
  
